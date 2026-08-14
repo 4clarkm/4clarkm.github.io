@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason Clark</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f9f9f9;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .header-text h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .header-text p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .header-links a {
+            display: inline-block;
+            margin-right: 12px;
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 48px;
+        }
+
+        section h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #888;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        section p {
+            font-size: 0.97rem;
+            color: #333;
+        }
+
+        /* Project card */
+        .project-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .project-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .project-card p {
+            font-size: 0.92rem;
+            color: #555;
+            margin-bottom: 14px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .skill-group h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        .skill-group p {
+            font-size: 0.88rem;
+            color: #444;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.82rem;
+            color: #aaa;
+            padding-top: 24px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-text">
+                <h1>Mason Clark</h1>
+                <p>Mathematics & Quantitative Economics - UW-Madison<br>
+                Interested in quantitative finance, statistical modeling, and systematic trading.</p>
+                <div class="header-links">
+                    <a href="mailto:masonaclark24@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/4clarkm" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/4clarkm" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <section>
+            <h2>About</h2>
+            <p>
+                I am a sophomore at UW-Madison pursuing a B.S. in Mathematics with a focus on 
+                Statistical Analysis and Risk Assessment, alongside a B.S. in Quantitative Economics. 
+                My coursework spans econometrics, time series analysis, real analysis, and mathematical 
+                statistics. I am interested in quantitative research, systematic trading, and the 
+                intersection of statistical modeling and financial markets. This past summer I interned 
+                on the Data Engineering and Governance team at Northwestern Mutual, where I built 
+                production API endpoints, SQL-driven metadata workflows, and data quality tooling. 
+                I also work as a data science researcher at the UW Data Science Institute.
+            </p>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2>Projects</h2>
+
+            <div class="project-card">
+                <h3>Statistical Arbitrage - V/MA Pairs Trading Strategy</h3>
+                <p>
+                    A market neutral pairs trading strategy exploiting the cointegrated relationship 
+                    between Visa and Mastercard. Built a full backtesting framework with rolling hedge 
+                    ratios, cointegration testing, transaction costs, Monte Carlo simulation, and stress 
+                    testing. The strategy returned +10.9% during the COVID crash and +5.3% during the 
+                    2022 rate shock while the broader market fell - a direct demonstration of market 
+                    neutrality in practice. Deployed as a live interactive Streamlit dashboard.
+                </p>
+                <div class="project-links">
+                    <a href="https://mclark-pairs-trading.streamlit.app" target="_blank" class="btn-primary">Live Dashboard</a>
+                    <a href="https://github.com/4clarkm/pairs-trading-stat-arb" target="_blank" class="btn-secondary">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Momentum Regime Analysis - S&P 500 Sector ETFs</h3>
+                <p>
+                    A cross-sectional momentum strategy across 11 S&P 500 sector ETFs. Constructed 
+                    momentum signals, tested regime-switching rules conditioned on bull and bear market 
+                    environments, and implemented inverse volatility weighting. Found that dropping the 
+                    short leg in bull markets improved the Sharpe ratio from -0.27 to 0.40 and cut max 
+                    drawdown from -76% to -31%.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/4clarkm/momentum-regime-analysis" target="_blank" class="btn-secondary">GitHub</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>Programming</h4>
+                    <p>Python, R, SQL, Stata, Kotlin</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Libraries & Tools</h4>
+                    <p>pandas, NumPy, statsmodels, Streamlit, ggplot2</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Quantitative Methods</h4>
+                    <p>Econometrics, Time Series, Statistical Inference, Monte Carlo Simulation, Backtesting</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Infrastructure</h4>
+                    <p>Git, GitLab CI/CD, REST API Development, VS Code</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            Mason Clark - masonaclark24@gmail.com
+        </footer>
+
+    </div>
+</body>
+</html>
